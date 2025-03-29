@@ -50,11 +50,11 @@ while True:
     audio_frame=get_next_audio_frame()
     voice_probability = cobra.process(audio_frame)
     voice_probability_float = float(voice_probability)
-    if voice_probability_float < 0.02:
+    if voice_probability_float < 0.016:
         under_value += 1
         over_value = 0
     if spacer > 20:
-        if voice_probability_float > 0.02:
+        if voice_probability_float > 0.016:
             under_value = 0
             over_value += 1
     spacer += 1
