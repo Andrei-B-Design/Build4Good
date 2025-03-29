@@ -62,7 +62,7 @@ while True:
 
 
 ############# record audio #############
-    if over_value == 5:
+    if over_value == 15:
         print("Audio detected: Recording")
         audio_file = (f'{n}_seconds.wav')
         for i in range(0, int(fs / chunk * seconds)):
@@ -78,6 +78,7 @@ while True:
         if n != 5:
             os.remove(f'{n-5}_seconds.wav')
         print("Finished Recording")
+        print("Total seconds recorded so far:",n)
         n+=5
 ########################################        
             
